@@ -4,12 +4,16 @@ let priorities = [];
 let finished = [];
 let deletedNotes = [];
 let deletedTitles = [];
+sheetsound = new Audio('sheetsound.mp3');
+crumplingsound = new Audio('crumplingsound.mp3');
+crumplingsound.volume = 0.1;
 
 function openWindow() {
     document.getElementById('textarea').classList.remove('d-none'); //Funktion, die textarea onclick öffnet
 
 }
 function deleteNote(index) {
+    crumplingsound.play();
     deletedNotes.push(notes[index]);
     deletedTitles.push(titles[index]);
     createTrash();                              // onclick Funktion, die angeklicktes HTML Element aus array und aus der Anzeige löscht
@@ -48,10 +52,7 @@ function createTrash() {
         document.getElementById('trash').innerHTML += `
         <div class="note-container" id="note-container${i}">
         <div class ="title"><b>${deletedTitles[i]}</b>
-        <div> <div class="tooltip"> <img onclick="finishNote(${i})"src ="tick.png"> <span class="tooltiptext position2"> Done </span> </div>
-        <div class="tooltip"> <img onclick="setPriority(${i})" src ="priority.png"> <span class="tooltiptext">High Priority </span>
-        </div> <div class="tooltip"> <img onclick="deleteNote(${i})" src ="trash.png">  <span class="tooltiptext position2"> Delete </span> </div>
-        </div> </div>  <br>
+        </div>  <br>
         <div class="note"> ${deletedNotes[i]} </div>
         </div>`;
     }
@@ -87,22 +88,10 @@ function openTrash() {
         setArray('finished', finished);
     }
 
-    /*    colorIsRed = false;
-        function setPriority(i) {
-
-            if (colorIsRed) {
-                document.getElementById(`note-container${i}`).classList.remove('red');
-                colorIsRed = false;
-            } else {
-                document.getElementById(`note-container${i}`).classList.add('red');
-                colorIsRed = true;
-            }
-        } */
-
-
 
 
     function addNote() {
+        sheetsound.play();
         let newTitle = document.getElementById('input-field').value;  //der Eingabe in das input-Feld wird eine Variable zugeordnet
         let newNote = document.getElementById('textarea').value;        //der Eingabe in die textarea wird eine Variable zugeordnet
         notes.push(newNote);                                            //die Variable für die textarea wird in das array notes hinzugefügt
