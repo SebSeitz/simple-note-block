@@ -1,15 +1,12 @@
-
 body {
     background-image: url(noteblock-background.jpg);
     background-size: cover;
     background-position: 50% 50%;
     margin: 0;
     background-attachment: fixed;
-    font-family: 'Itim', cursive;
-    z-index: 0
-
+    font-family: "Itim", cursive;
+    z-index: 0;
 }
-
 
 button {
     font-size: 20px;
@@ -19,7 +16,7 @@ button {
     border-radius: 8px;
 }
 textarea {
-    border-radius: 8px;;
+    border-radius: 8px;
 }
 
 .notes {
@@ -29,35 +26,31 @@ textarea {
     display: flex;
     flex-direction: column;
     max-width: 250px;
-    margin-top:25px;
+    margin-top: 25px;
     margin-left: 25px;
-
 }
 textarea {
     height: 100px;
-
-
 }
 .d-none {
     display: none;
 }
 
-.trash{
+.trash {
     font-size: 25px;
     color: white;
 }
-.trash:hover{
+.trash:hover {
     cursor: pointer;
 }
 
 .title {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 25px;
     display: flex;
     justify-content: space-between;
     margin-left: 5px;
     text-shadow: 1px 2px chocolate;
-
 }
 .title-field {
     display: flex;
@@ -65,43 +58,64 @@ textarea {
     color: sandybrown;
     position: fixed;
     top: 25px;
-    right: 25px;
+    right: 120px;
     background-color: black;
     border: solid;
     border-radius: 8px;
-    padding: 10px
+    padding: 10px;
 }
+
+.side-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: sandybrown;
+}
+
+.side-bar img {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 26%;
+    top: 25px;
+}
+
 .note {
     margin-left: 5px;
     font-style: italic;
     font-size: 22px;
 }
 
-
 .tooltip {
     position: relative;
     display: inline-block;
     cursor: pointer;
-
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 60px;
-  background-color: black;
-  color: sandybrown;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  border: solid;
-  font-size: 10px;
-  position: absolute;
-  z-index: 99;
-  top: 29px;
-  right: 17px;
-  opacity: 0.5;
-  text-shadow: none;
+    visibility: hidden;
+    width: 60px;
+    background-color: black;
+    color: sandybrown;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    border: solid;
+    font-size: 10px;
+    position: absolute;
+    z-index: 99;
+    top: 29px;
+    right: 17px;
+    opacity: 0.5;
+    text-shadow: none;
+}
 
+.tooltiptext2 {
+    font-size: 20px !important;
 }
 .position2 {
     position: absolute;
@@ -109,13 +123,23 @@ textarea {
     right: 5px !important;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-
+.position3 {
+    position: absolute;
+    top: 90px !important;
+    left: 26% !important;
+}
+.position4 {
+    top: 154px !important;
+    left: 26% !important;
 }
 
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 
-
+.showNotes {
+    top: 85px !important;
+}
 .note-container {
     display: flex;
     height: 150px;
@@ -127,13 +151,11 @@ textarea {
     color: black;
     overflow: auto;
     margin: 25px;
-
 }
 .note-container img {
     height: 20px;
     width: 20px;
     margin-right: 5px;
-
 }
 .red {
     background-color: red;
@@ -149,6 +171,4 @@ textarea {
     .title-field {
         display: none;
     }
-
 }
-

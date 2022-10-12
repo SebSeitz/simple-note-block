@@ -24,13 +24,16 @@
         <textarea id="textarea" placeholder="Type note" class="d-none"></textarea>
         <div class="title-field">My Noteblock</div>
     </div>
-    <div class="trash" onclick="openTrash()">Trash</div>
     <div class="trash" onclick="showNotes()">Notes</div>
 
     <div class="main-body" id="notes">
 
     </div>
     <div class="main-body d-none" id="trash"></div>
+    <div class="side-bar">
+        <div> <div class="tooltip"> <img onclick="openTrash()"src ="trashlink.png"> <span class="tooltiptext tooltiptext2 position3"> Open Trash </span> </div>
+        <div> <div class="tooltip"> <img class="showNotes" onclick="showNotes()"src ="noteblock.png"> <span class="tooltiptext tooltiptext2 position4"> Open Notes </span> </div>
+    </div>
 
 
 </body>

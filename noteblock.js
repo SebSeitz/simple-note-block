@@ -18,7 +18,7 @@ function deleteNote(index) {
     deletedTitles.push(titles[index]);
     setArray('deletedTitles', deletedTitles);
     setArray('deletedNotes', deletedNotes);
-    createTrash();                              // onclick Funktion, die angeklicktes HTML Element aus array und aus der Anzeige löscht
+    // createTrash();                              // onclick Funktion, die angeklicktes HTML Element aus array und aus der Anzeige löscht
     titles.splice(index, 1);                    //ein Element (Zahl nach dem Komma) wird an der Stelle "index" (vor dem Komma), also an der angeklickten Stelle aus dem array namens "titles" entfernt
     notes.splice(index, 1);
     let priorityIndex = priorities.indexOf(index);
@@ -93,7 +93,7 @@ function finishNote(i) {
 
 
 function addNote() {
-    let newTitle = document.getElementById('input-field').value;  //der Eingabe in das input-Feld wird eine Variable zugeordnet
+    let newTitle = document.getElementById('input-field').value;    //der Eingabe in das input-Feld wird eine Variable zugeordnet
     let newNote = document.getElementById('textarea').value;        //der Eingabe in die textarea wird eine Variable zugeordnet
     if (newTitle && newNote != '') {
         sheetsound.play();
